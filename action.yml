@@ -1,6 +1,6 @@
 name: HCP Packer Action
 author: Ethan Hassett <erhassett@outlook.com>
-description: GitHub Action for automating HCP Packer releases
+description: GitHub Action for automating HCP Packer release channels
 
 inputs:
   channel:

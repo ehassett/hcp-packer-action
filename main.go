@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"log"
+	"os"
 
 	packer "github.com/hashicorp/hcp-sdk-go/clients/cloud-packer-service/stable/2021-04-30/client/packer_service"
 	cloud "github.com/hashicorp/hcp-sdk-go/clients/cloud-shared/v1/models"
@@ -25,13 +26,10 @@ type Parameters struct {
 }
 
 func main() {
-	// Necessary Inputs: bucket (human-readable), channel (human-readable), hcp_org_id (UUID), hcp_project_id (UUID), ENVIRONMENT VARS
-	//channel := os.Getenv("INPUT_CHANNEL")
-	//bucket := os.Getenv("INPUT_BUCKET")
-	orgID := ""
-	projID := ""
-	bucketSlug := ""
-	channelSlug := ""
+	bucketSlug := os.Getenv("INPUT_BUCKET")
+	channelSlug := os.Getenv("INPUT_CHANNEL")
+	orgID := os.Getenv("HCP_ORGANIZATION_ID")
+	projID := os.Getenv("HCP_PROJECT_ID")
 
 	// Set params
 	params := Parameters{
