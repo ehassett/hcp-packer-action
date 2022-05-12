@@ -1,0 +1,19 @@
+name: HCP Packer Action
+author: Ethan Hassett <erhassett@outlook.com>
+description: GitHub Action for automating HCP Packer release channels
+
+inputs:
+  channel:
+    description: release channel to point to most recent iteration
+    required: true
+  bucket:
+    description: HCP Packer bucket to work with
+    required: true
+
+runs:
+  using: docker
+  image: Dockerfile
+
+branding:
+  color: blue
+  icon: package
