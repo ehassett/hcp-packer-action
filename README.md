@@ -1,6 +1,7 @@
 # HCP Packer Action
 
-GitHub Action for automating HCP Packer releases
+GitHub Action for automating HCP Packer releases.
+Points the specified Channel the most recent Iteration of the specified Bucket.
 
 ## Table of Contents
 - [HCP Packer Action](#hcp-packer-action)
