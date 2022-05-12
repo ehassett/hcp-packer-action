@@ -7,9 +7,13 @@ inputs:
     description: release channel to point to most recent iteration
     required: true
   bucket:
-    description: HCP bucket to work with
+    description: HCP Packer bucket to work with
     required: true
 
 runs:
   using: docker
-  image: Dockerfile 
+  image: Dockerfile
+
+branding:
+  color: blue
+  icon: package
